@@ -3,18 +3,18 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Contao Zammad Gateway extension.
+ * This file is part of the Contao OpenCRM Gateway extension.
  *
- * (c) Contao Academy
+ * (c) kikmedia
  *
  * @license LGPL-3.0-or-later
  */
 
-namespace ContaoAcademy\ZammadNCApiBundle\Config;
+namespace Kikmedia\OpencrmNCApiBundle\Config;
 
 use Terminal42\NotificationCenterBundle\Config\AbstractConfig;
 
-class ZammadMessageConfig extends AbstractConfig
+class OpencrmMessageConfig extends AbstractConfig
 {
     public function getEmail(): string
     {

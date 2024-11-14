@@ -3,21 +3,21 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Contao Zammad Gateway extension.
+ * This file is part of the Contao Opencrm Gateway extension.
  *
- * (c) Contao Academy
+ * (c) kikmedia
  *
  * @license LGPL-3.0-or-later
  */
 
 use ContaoAcademy\ZammadNCApiBundle\Gateway\ZammadGateway;
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['palettes']['__selector__'][] = 'zammadAuthType';
-$GLOBALS['TL_DCA']['tl_nc_gateway']['palettes'][ZammadGateway::NAME] = '{title_legend},title,type;{gateway_legend},zammadHost,zammadAuthType';
-$GLOBALS['TL_DCA']['tl_nc_gateway']['subpalettes']['zammadAuthType_basic'] = 'zammadUser,zammadPassword';
-$GLOBALS['TL_DCA']['tl_nc_gateway']['subpalettes']['zammadAuthType_token'] = 'zammadToken';
+$GLOBALS['TL_DCA']['tl_nc_gateway']['palettes']['__selector__'][] = 'opencrmAuthType';
+$GLOBALS['TL_DCA']['tl_nc_gateway']['palettes'][OpencrmGateway::NAME] = '{title_legend},title,type;{gateway_legend},opencrmHost,opencrmAuthType';
+$GLOBALS['TL_DCA']['tl_nc_gateway']['subpalettes']['opencrmAuthType_basic'] = 'opencrmUser,opencrmPassword';
+$GLOBALS['TL_DCA']['tl_nc_gateway']['subpalettes']['opencrmAuthType_token'] = 'opencrmToken';
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadHost'] = [
+$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['opencrmHost'] = [
     'inputType' => 'text',
     'eval' => [
         'tl_class' => 'w50',
@@ -28,7 +28,7 @@ $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadHost'] = [
     'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadAuthType'] = [
+$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['opencrmAuthType'] = [
     'inputType' => 'select',
     'eval' => [
         'tl_class' => 'clr w50',
@@ -37,12 +37,12 @@ $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadAuthType'] = [
         'mandatory' => true,
     ],
     'options' => ['basic', 'token'],
-    'reference' => &$GLOBALS['TL_LANG']['tl_nc_gateway']['zammadAuthTypes'],
+    'reference' => &$GLOBALS['TL_LANG']['tl_nc_gateway']['opencrmAuthTypes'],
     'exclude' => true,
     'sql' => ['type' => 'string', 'length' => 8, 'default' => ''],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadToken'] = [
+$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['opencrmToken'] = [
     'inputType' => 'text',
     'eval' => [
         'tl_class' => 'w50',
@@ -52,7 +52,7 @@ $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadToken'] = [
     'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadUser'] = [
+$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['opencrmUser'] = [
     'inputType' => 'text',
     'eval' => [
         'tl_class' => 'w50',
@@ -62,7 +62,7 @@ $GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadUser'] = [
     'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['zammadPassword'] = [
+$GLOBALS['TL_DCA']['tl_nc_gateway']['fields']['opencrmPassword'] = [
     'inputType' => 'text',
     'eval' => [
         'tl_class' => 'w50',

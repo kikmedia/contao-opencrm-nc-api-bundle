@@ -1,4 +1,4 @@
-# Zammad API Schnittstelle
+# OpenCRM API Schnittstelle
 API Anbindung zum [Ticket System Zammad](https://zammad.com/) über ein eigenes Gateway des Notification Centers.
 
 ## Beschreibung

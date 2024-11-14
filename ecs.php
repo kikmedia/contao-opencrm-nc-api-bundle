@@ -14,7 +14,7 @@ return static function (ECSConfig $ecsConfig): void {
     ]);
 
     $ecsConfig->ruleWithConfiguration(HeaderCommentFixer::class, [
-        'header' => "This file is part of the Contao Zammad Gateway extension.\n\n(c) Contao Academy\n\n@license LGPL-3.0-or-later",
+        'header' => "This file is part of the Contao OpenCRM Gateway extension.\n\n(c) kikmedia\n\n@license LGPL-3.0-or-later",
     ]);
 
     $ecsConfig->parallel();

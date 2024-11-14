@@ -3,26 +3,26 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Contao Zammad Gateway extension.
+ * This file is part of the Contao Open CRM Gateway extension.
  *
- * (c) Contao Academy
+ * (c) kikmedia
  *
  * @license LGPL-3.0-or-later
  */
 
-namespace ContaoAcademy\ZammadNCApiBundle\Migration;
+namespace Kikmedia\OpencrmNCApiBundle\Migration;
 
 use Contao\Config;
 use Contao\CoreBundle\Framework\ContaoFramework;
 use Contao\CoreBundle\Migration\AbstractMigration;
 use Contao\CoreBundle\Migration\MigrationResult;
-use ContaoAcademy\ZammadNCApiBundle\Gateway\ZammadGateway;
+use Kikmedia\OpencrmNCApiBundle\Gateway\ZammadGateway;
 use Doctrine\DBAL\Connection;
 use Doctrine\DBAL\Schema\Column;
 
-class ZammadGatewayMigration extends AbstractMigration
+class OpencrmGatewayMigration extends AbstractMigration
 {
-    private static $fields = ['zammadAuthType', 'zammadHost', 'zammadUser', 'zammadPassword', 'zammadToken'];
+    private static $fields = ['opencrmAuthType', 'opencrmHost', 'opencrmUser', 'opencrmPassword', 'opencrmToken'];
 
     public function __construct(
         private readonly Connection $db,
@@ -48,12 +48,12 @@ class ZammadGatewayMigration extends AbstractMigration
             return false;
         }
 
-        return (bool) $this->db->fetchOne("SELECT TRUE FROM tl_nc_gateway WHERE type = ? AND zammadAuthType = ''", [ZammadGateway::NAME]);
+        return (bool) $this->db->fetchOne("SELECT TRUE FROM tl_nc_gateway WHERE type = ? AND opencrmAuthType = ''", [OpencrmGateway::NAME]);
     }
 
     public function run(): MigrationResult
     {
-        $this->db->update('tl_nc_gateway', $this->getLegacyConfigs(), ['zammadAuthType' => '']);
+        $this->db->update('tl_nc_gateway', $this->getLegacyConfigs(), ['opencrmAuthType' => '']);
 
         return $this->createResult(true);
     }

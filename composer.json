@@ -1,18 +1,23 @@
 {
-    "name": "contaoacademy/contao-zammad-nc-api-bundle",
-    "description": "API Anbindung zum Ticket System Zammad über ein Gateway des Notification-Center",
+    "name": "kikmedia/contao-opencrm-nc-api-bundle",
+    "description": "API Anbindung zum Ticket System OpenCRM über ein Gateway des Notification-Center",
     "type": "contao-bundle",
     "keywords": [
         "contao",
-        "zammad",
+        "opencrm",
         "notification-center"
     ],
-    "homepage": "https://contao-academy.de",
+    "homepage": "https://kikmedia.de",
     "authors": [
+        {
+            "name": "kikmedia",
+            "homepage": "https://kikmedia.de",
+            "role": "Owner"
+        },
         {
             "name": "Contao Academy",
             "homepage": "https://contao-academy.de",
-            "role": "Owner"
+            "role": "Developer"
         },
         {
             "name": "Fritz Michael Gschwantner",
@@ -23,7 +28,7 @@
     "license": "LGPL-3.0-or-later",
     "autoload": {
         "psr-4": {
-            "ContaoAcademy\\ZammadNCApiBundle\\": "src/"
+            "Kikmedia\\OpencrmNCApiBundle\\": "src/"
         }
     },
     "require": {
@@ -37,11 +42,11 @@
         "symfony/http-kernel": "^5.4 || ^6.4 || ^7.0"
     },
     "extra": {
-        "contao-manager-plugin": "ContaoAcademy\\ZammadNCApiBundle\\ContaoManager\\Plugin"
+        "contao-manager-plugin": "Kikmedia\\OpencrmNCApiBundle\\ContaoManager\\Plugin"
     },
     "support": {
-        "issues": "https://github.com/contaoacademy/contao-zammad-nc-api-bundle/issues",
-        "source": "https://github.com/contaoacademy/contao-zammad-nc-api-bundle"
+        "issues": "https://github.com/kikmedia/contao-opencrm-nc-api-bundle/issues",
+        "source": "https://github.com/kikmedia/contao-opencrm-nc-api-bundle"
     },
     "require-dev": {
         "contao/easy-coding-standard": "^6.0",

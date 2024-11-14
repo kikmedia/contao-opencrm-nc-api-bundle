@@ -3,9 +3,9 @@
 declare(strict_types=1);
 
 /*
- * This file is part of the Contao Zammad Gateway extension.
+ * This file is part of the Contao Opencrm Gateway extension.
  *
- * (c) Contao Academy
+ * (c) kikmedia
  *
  * @license LGPL-3.0-or-later
  */
@@ -13,7 +13,7 @@ declare(strict_types=1);
 use Doctrine\DBAL\Platforms\MySQLPlatform;
 use Terminal42\NotificationCenterBundle\Token\TokenContext;
 
-$GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_email'] = [
+$GLOBALS['TL_DCA']['tl_nc_message']['fields']['opencrm_email'] = [
     'inputType' => 'text',
     'eval' => ['mandatory' => true, 'maxlength' => 255, 'tl_class' => 'clr w50'],
     'exclude' => true,
@@ -21,14 +21,14 @@ $GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_email'] = [
     'sql' => ['type' => 'string', 'length' => 255, 'default' => ''],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_params'] = [
+$GLOBALS['TL_DCA']['tl_nc_message']['fields']['opencrm_params'] = [
     'exclude' => true,
     'inputType' => 'keyValueWizard',
     'eval' => ['tl_class' => 'clr'],
     'sql' => ['type' => 'blob', 'notnull' => false],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_title'] = [
+$GLOBALS['TL_DCA']['tl_nc_message']['fields']['opencrm_title'] = [
     'exclude' => true,
     'inputType' => 'text',
     'default' => '',
@@ -37,7 +37,7 @@ $GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_title'] = [
     'sql' => ['type' => 'string', 'length' => 64, 'default' => ''],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_group'] = [
+$GLOBALS['TL_DCA']['tl_nc_message']['fields']['opencrm_group'] = [
     'exclude' => true,
     'inputType' => 'text',
     'default' => '',
@@ -46,7 +46,7 @@ $GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_group'] = [
     'sql' => ['type' => 'string', 'length' => 64, 'default' => ''],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_body'] = [
+$GLOBALS['TL_DCA']['tl_nc_message']['fields']['opencrm_body'] = [
     'exclude' => true,
     'inputType' => 'textarea',
     'default' => '',
@@ -55,4 +55,4 @@ $GLOBALS['TL_DCA']['tl_nc_message']['fields']['zammad_body'] = [
     'sql' => ['type' => 'text', 'length' => MySQLPlatform::LENGTH_LIMIT_TEXT, 'notnull' => false],
 ];
 
-$GLOBALS['TL_DCA']['tl_nc_message']['palettes']['zammad'] = '{title_legend},title,gateway;{zammad_customer_legend},zammad_email,zammad_params;{zammad_ticket_legend},zammad_title,zammad_group,zammad_body;{publish_legend},published';
+$GLOBALS['TL_DCA']['tl_nc_message']['palettes']['opencrm'] = '{title_legend},title,gateway;{opencrm_customer_legend},opencrm_email,opencrm_params;{opencrm_ticket_legend},opencrm_title,opencrm_group,opencrm_body;{publish_legend},published';
