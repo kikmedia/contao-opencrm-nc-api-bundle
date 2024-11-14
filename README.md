@@ -1,20 +1,20 @@
 # OpenCRM API Schnittstelle
-API Anbindung zum [Ticket System Zammad](https://zammad.com/) über ein eigenes Gateway des Notification Centers.
+API Anbindung zu [OpenCRM](https://opencrm.com/) über ein eigenes Gateway des Notification Centers.
 
 ## Beschreibung
-Über die Schnittstelle können Formulardaten direkt als neues Ticket an Zammad gesendet werden. Falls ein Kontakt in Zammad nicht gefunden wird, wird dieser ebenfalls erzeugt. Im Nachrichtentext können beliebige Daten anhand von Simple Tokens ergänzt werden.
+Über die Schnittstelle können Formulardaten direkt als neues Ticket an OpenCRM gesendet werden. Falls ein Kontakt in OpenCRM nicht gefunden wird, wird dieser ebenfalls erzeugt. Im Nachrichtentext können beliebige Daten anhand von Simple Tokens ergänzt werden.
 
 > [!IMPORTANT]  
 > Die Version 3.* ist nicht mit den Vorgängerversionen kompatibel. Bei einem Update von 2.* auf 3.* muss die Erweiterung neu konfiguriert werden.
 
 ## Dokumentation
-Eine ausführliche Doku findest Du hier: https://www.fenepedia.de/tools/zammad-connector
+t.b.d
 
 ## Schnellstart-Anleitung
-1. In Zammad ein neuen Zugriffstoken generieren: User > Profil > Token-Zugriff > Erstellen (Berechtigung: `ticket.agent`)
+1. In OpenCRM ein neuen Zugriffstoken generieren: User > Profil > Token-Zugriff > Erstellen (Berechtigung: `ticket.agent`)
 2. Notification Center > Neues Gateway vom Typ Zammad-API (Host + Token hinterlegen)
 3. Neue Benachrichtigung (z. B. Formularübergragung)
-4. Neue Nachricht erstellen: Gateway = Zammad
+4. Neue Nachricht erstellen: Gateway = OpenCRM
 5. Pflichtfelder ausfüllen: E-Mail, Ticket-Betreff, Ticket-Gruppe, Nachrichtentext (Simple Token möglich: `##form_feldname##` )
 6. Kunden-Parameter bei Bedarf ergänzen (Empfehlung: `firstname`, `lastname`)
 
