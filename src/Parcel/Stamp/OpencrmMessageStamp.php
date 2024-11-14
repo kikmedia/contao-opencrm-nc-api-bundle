@@ -18,7 +18,7 @@ use Terminal42\NotificationCenterBundle\Parcel\Stamp\StampInterface;
 
 class OpencrmMessageStamp extends AbstractConfigStamp
 {
-    public function __construct(public OpencrmMessageConfig $zammadMessageConfig)
+    public function __construct(public OpencrmMessageConfig $opencrmMessageConfig)
     {
         parent::__construct($this->opencrmMessageConfig);
     }
