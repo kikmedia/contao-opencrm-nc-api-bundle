@@ -1,5 +1,5 @@
 # OpenCRM API Schnittstelle
-API Anbindung zum [Ticket System Zammad](https://zammad.com/) über ein eigenes Gateway des Notification Centers.
+API Anbindung zum [Ticket System OpenCRM](https://opencrm.com/) über ein eigenes Gateway des Notification Centers.
 
 ## Beschreibung
 Über die Schnittstelle können Formulardaten direkt als neues Ticket an Zammad gesendet werden. Falls ein Kontakt in Zammad nicht gefunden wird, wird dieser ebenfalls erzeugt. Im Nachrichtentext können beliebige Daten anhand von Simple Tokens ergänzt werden.
